@@ -1,4 +1,4 @@
-#1/bin/bash
+#!/bin/bash
 
 read -p "Enter 1st no: " num1
 read -p "enter 2nd no: " num2
@@ -7,6 +7,7 @@ expr $num1 + 0
 if [ $? -eq 0 ]
 then
 echo "valid"
+ch=1
 else 
 echo "unvalid"
 ch=0
@@ -15,9 +16,11 @@ expr $num2 + 0
 if [ $? -eq 0 ]
 then
 echo "valid"
+ch=1
 else
-echo "unvalid"
 ch=0
+echo "unvalid"
+
 fi
 if [ $ch -eq 1 ]
 then
