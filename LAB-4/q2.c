@@ -2,14 +2,14 @@
 #include <sys/types.h>
 main(){
 
-printf("sbrk(0) before malloc(): 0x%x\n", sbrk(0));
-int *i1, *i2 , *i3, *i4;
+printf("sbrk(0) before malloc(): 0x%x\n", sbrk(0)); // printing break before malloc
+int *i1, *i2 , *i3, *i4;  // four pointers
 
 i1 = (int *) malloc(4);
 printf("sbrk(0) after `i1 = (int *) malloc(2)': 0x%x\n",
 sbrk(0));
 i2 = (int *) malloc(4);
-printf("sbrk(0) after `i2 = (int *) malloc(3)': 0x%x\n",
+printf("sbrk(0) after `i2 = (int *) malloc(3)': 0x%x\n", 
 sbrk(0));
 printf("sbrk(0) after `i3 = (int *) malloc(4)': 0x%x\n",
 sbrk(0));
